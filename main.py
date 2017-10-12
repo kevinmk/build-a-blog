@@ -8,7 +8,7 @@ app.config['SQLALCHEMY_ECHO'] = True
 db = SQLAlchemy(app)
 
 
-class Blog(db.Model):
+class Blog(db.Model):   #init the database!
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(140))
