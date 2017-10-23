@@ -1,19 +1,34 @@
 {% extends "base.html" %}
-
 {% block content %}
+<h1>New Post</h1>
 
-    <h1>Add a Blog Entry</h1>
+<form method="post">
+    <table>
+        <tr>
+            <td><label for="title"><strong>Blog title:</strong></label></td>
+        </tr>
 
-    <form method= "post">
-        <label for="title">Title for your new blog:</label>
-        <br>
-        <input type="text" name='title' value=""></input>
-        <p></p>
-        <label for="body">Your new blog:</label>
-        <br>
-        <textarea name='body' value=""></textarea>
-        <br>
-        <input type="submit" value='Add Entry'></input>
-    </form>
+        <tr>
+            <td>
+		        <input type="text" name="title"/>
+            </td>
+        </tr>
+        
+        
+        
+        <tr>
+	        <td><label for="body"><strong>Blog Body:</strong></label></td>
+        </tr>
+            
+        <tr>
+            <td>
+                <textarea id="body" name="body"></textarea>
+            </td>
+        </tr>
+    </table>
+    
+    
+    <input type="submit" value="Add Entry"/>
+</form>
 
 {% endblock %}
