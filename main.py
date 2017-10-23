@@ -30,7 +30,7 @@ def blog():
             blog = Blog.query.get(blg)
             return render_template('singlepost.html', blog=blog)
 
-@app.route('/newpost', methods=['POST', 'GET'])
+@app.route('/newpost', methods=['POST', 'GET'])    ### NEW post entry here, with improved error check.
 def new_post():
     if request.method == 'POST':
         title = request.form['title']
